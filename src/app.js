@@ -32,6 +32,7 @@ const initializeApp = async () => {
 
         app.use('/upload', express.static(path.join(__dirname,'uploads')));
         app.use('/uploads', express.static(path.join(__dirname,'uploads')));
+        app.use('/src/uploads', express.static(path.join(__dirname,'uploads')));
        
         // Routes setup
         app.use('/api', routes);
