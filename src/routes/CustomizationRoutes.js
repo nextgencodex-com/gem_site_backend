@@ -6,7 +6,7 @@ const {
   getCustomization,
   updateCustomization,
   deleteCustomization
-} = require('../controllers/customizationController'); // Changed to lowercase 'c'
+} = require('../controllers/CustomizationController');
 
 // Public routes
 router.route('/')
