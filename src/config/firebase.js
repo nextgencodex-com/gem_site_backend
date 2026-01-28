@@ -2,7 +2,7 @@ const admin = require('firebase-admin');
 require('dotenv').config();
 
 // Initialize Firebase Admin SDK
-const initializeFirebase = () => {
+const initializeFirebase = async () => {
   try {
     // Check if Firebase is already initialized
     if (admin.apps.length === 0) {
@@ -45,12 +45,12 @@ const initializeFirebase = () => {
         });
       }
 
-      console.log('Firebase Admin SDK initialized successfully');
+      console.log('✅ Firebase Admin SDK initialized successfully');
     }
     
     return admin;
   } catch (error) {
-    console.error('Error initializing Firebase:', error);
+    console.error('❌ Error initializing Firebase:', error);
     throw error;
   }
 };

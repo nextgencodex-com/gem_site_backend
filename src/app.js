@@ -21,6 +21,10 @@ process.setMaxListeners(0);
 const initializeApp = async () => {
     try {
         console.log('🚀 Starting server initialization...');
+        console.log('📋 Environment variables loaded:');
+        console.log('   - FIREBASE_PROJECT_ID:', !!process.env.FIREBASE_PROJECT_ID);
+        console.log('   - FIREBASE_PRIVATE_KEY:', !!process.env.FIREBASE_PRIVATE_KEY ? '✓ Set' : '✗ Missing');
+        console.log('   - NODE_ENV:', process.env.NODE_ENV);
         
         // Initialize Firebase
         await initializeFirebase();
@@ -42,10 +46,7 @@ const initializeApp = async () => {
         app.use('/api/contact', contactRoutes);
         app.use('/api/customizations', customizationRoutes); // Add this line
         app.use('/api/order', orderRoutes);
-        
-app.use('/api/custom-jewellery-request', customJewelleryRoutes);
-
-app.use('/api/contact', contactRoutes);
+        app.use('/api/custom-jewellery-request', customJewelleryRoutes);
 
         // Error handling middleware
         app.use((err, req, res, next) => {

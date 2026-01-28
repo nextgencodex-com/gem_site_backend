@@ -1,0 +1,7 @@
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+PassengerAppRoot "/home/ceycenbb/backend.ceycarb-australia.com"
+PassengerBaseURI "/"
+PassengerNodejs "/home/ceycenbb/nodevenv/backend.ceycarb-australia.com/20/bin/node"
+PassengerAppType node
+PassengerStartupFile src/app.js
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
