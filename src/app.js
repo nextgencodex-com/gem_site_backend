@@ -8,11 +8,10 @@ const { initializeFirebase } = require('./config/firebase');
 const gemRoutes = require('./routes/gemRoutes');
 const jewelryTypeRoutes = require('./routes/jeweloryRoutes');
 const jewelryRoutes = require('./routes/JewelryRoutes');
-const contactRoutes = require('./routes/contactRoutes');
+const contactRoutes = require('./routes/ContactRoutes');
 const path = require('path');
-const customizationRoutes = require('./routes/customizationRoutes'); // Changed to 
+const customizationRoutes = require('./routes/CustomizationRoutes');
 const customJewelleryRoutes = require('./routes/customJewelleryRoutes');
-// lowercase
 const orderRoutes = require('./routes/orderRoutes');
 // Fix MaxListeners warning
 process.setMaxListeners(0);
